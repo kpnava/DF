@@ -9,3 +9,7 @@ Router.route('/results', function(){
 Router.route('/results_list', function(){
 	this.render('search_results_list');
 })
+
+Router.route('/profile', function(){
+	this.render('profile');
+})

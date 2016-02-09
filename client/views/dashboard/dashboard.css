@@ -1,0 +1,13 @@
+ .nav-justified > li {
+    display: table-cell;
+    width: 1%;
+    border-radius: 0px;
+  }
+  .nav-justified > li > a {
+    margin-bottom: 0;
+    border-radius: 0px;
+  }
+  .dashboard-controls{
+  	bottom: 0px;
+  	position: fixed;
+  }

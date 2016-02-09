@@ -1,0 +1,28 @@
+<template name="create_appointment">
+
+	<div style="background-color: #5AA6D6;">
+		<div class="container-fluid">
+			<div class="input-group">
+				<a class="input-group-addon" style="color: white"><i class="fa fa-bars fa-2x"></i></a>
+				<h5 style="color: white">DocFinder</h5>
+				<a class="input-group-addon" style="color: white"><i class="fa fa-search fa-2x"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid fadeInUp animated">
+		<div class="col-xs-12">
+			<h5>Create an Appointment</h5>
+  
+			<p>With: Dr. Nicolo Engles</p>
+			<div class="form-group">
+				<input class="form-control" placeholder="Date" type="Date" />
+			</div>
+			<div class="form-group">
+				<textarea class="form-control" onkeyup="var o = this; o.style.height = '1px';
+	    o.style.height = (25+o.scrollHeight)+'px';" placeholder="Reason" style="overflow: hidden"></textarea>
+			</div>
+			<a href="#" class="btn btn-primary btn-block">Send</a>
+		</div>
+	</div>
+</template> 

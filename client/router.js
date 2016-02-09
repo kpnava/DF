@@ -13,3 +13,19 @@ Router.route('/results_list', function(){
 Router.route('/profile', function(){
 	this.render('profile');
 })
+
+Router.route('/appointment', function(){
+	this.render('create_appointment');
+})
+
+Router.route('/login', function(){
+	this.render('login');
+})
+
+Router.route('/signup', function(){
+	this.render('signup');
+})
+
+Router.route('/dashboard', function(){
+	this.render('dashboard');
+})

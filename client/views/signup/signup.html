@@ -1,0 +1,140 @@
+<template name="signup">
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-xs-12">
+				
+				<h5>Sign Up <span class="pull-right"><a href="#"><i class="fa fa-close"></i></a></span></h5>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+
+				<ul class="nav nav-tabs" style="display: none;">
+				  <li class="active"><a href="#step1" data-toggle="tab" aria-expanded="true">Step 1</a></li>
+				  <li class=""><a href="#step2" data-toggle="tab" aria-expanded="false">Step 2</a></li>
+				  <li class=""><a href="#step3" data-toggle="tab" aria-expanded="false">Step 3</a></li>
+				  <li class=""><a href="#step4" data-toggle="tab" aria-expanded="false">Step 4</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+
+				  <div class="tab-pane fade  active in" id="step1">
+				  	<h6>Step 1</h6>
+				    <div class="form-group">
+				      <label class="col-lg-2 control-label">Are you a Doctor or a Patient?</label>
+				      <div class="col-lg-10">
+				        <div class="radio">
+				          <label>
+				            <input type="radio" name="optionsRadios" id="doctorRadio" value="Doctor" checked="{{doctorSignUp}}">
+				            I'm a Doctor
+				          </label>
+				        </div>
+				        <div class="radio">
+				          <label>
+				            <input type="radio" name="optionsRadios" id="patientRadio" value="Patient">
+				            I'm a Patient
+				          </label>
+				        </div>
+				      </div>
+				    </div>
+			    	{{#if step1Val}}
+			    	<a href="#step2" class="btn btn-primary pull-right fadeIn animated" data-toggle="tab">Next</a>
+			    	{{/if}}
+			    
+				  </div>
+
+
+				  <div class="tab-pane fade" id="step2">
+				    <h6>Step 2</h6>
+				    <p>Fill up the following with your details.</p>
+				    <div class="form-group">
+				    	{{#if isDoctor}}
+				    		<form class="form-horizontal" id="detailsForm">
+							  <fieldset>
+							  	<legend>Doctor Sign Up</legend>
+							    <div class="form-group">
+							      <label for="inputName" class="col-lg-2 control-label">Name</label>
+							      <div class="col-lg-10">
+							        <input type="text" class="form-control" id="inputName" placeholder="Name" required="required" />
+							      </div>
+							    </div>
+							    <div class="form-group">
+							      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+							      <div class="col-lg-10">
+							        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required />
+							      </div>
+							    </div>
+							    <div class="form-group">
+							      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+							      <div class="col-lg-10">
+							        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required />
+							      </div>
+							    </div>
+							    <div class="form-group">
+							      <label for="inputPasswordVal" class="col-lg-2 control-label">Confirm Password</label>
+							      <div class="col-lg-10">
+							        <input type="password" class="form-control" id="inputPasswordVal" placeholder="Confirm Password" required />
+							      </div>
+							    </div>
+							  </fieldset>
+							</form>
+				    	{{else}}
+				    		{{#if isPatient}}
+				    		<form class="form-horizontal" id="detailsForm">
+							  <fieldset>
+							  	<legend>Patient Sign Up</legend>
+							    <div class="form-group">
+							      <label for="inputName" class="col-lg-2 control-label">Name</label>
+							      <div class="col-lg-10">
+							        <input type="text" class="form-control" id="inputName" placeholder="Name" required="required" />
+							      </div>
+							    </div>
+							    <div class="form-group">
+							      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+							      <div class="col-lg-10">
+							        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required />
+							      </div>
+							    </div>
+							    <div class="form-group">
+							      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+							      <div class="col-lg-10">
+							        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required />
+							      </div>
+							    </div>
+							    <div class="form-group">
+							      <label for="inputPasswordVal" class="col-lg-2 control-label">Confirm Password</label>
+							      <div class="col-lg-10">
+							        <input type="password" class="form-control" id="inputPasswordVal" placeholder="Confirm Password" required />
+							      </div>
+							    </div>
+							  </fieldset>
+							</form>
+				    		{{else}}
+				    		<p>Please go back and select if you are a Doctor or a Patient.</p>
+				    		{{/if}}
+				    	{{/if}}
+				    </div>
+				    <div class="form-group">
+				    	<a href="#step1" class="btn btn-primary pull-left" data-toggle="tab">Prev</a>
+				    	<a href="#step3" class="btn btn-primary pull-right" data-toggle="tab">Next</a>
+				    </div>
+				  </div>
+				  <div class="tab-pane fade" id="step3">
+				    <p>Congratulations {{Name}}! you are now registered in DocFinder.</p>
+				    <p>Use your account to login and complete your profile details.</p>
+
+				    <div class="form-group">
+				    	<a href="/login" class="btn btn-primary btn-block">Go to Login</a>
+				    </div>
+				  </div>
+				</div>
+
+			</div>
+		</div>
+ 
+	</div>
+
+	
+</template>

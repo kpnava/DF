@@ -1,16 +1,26 @@
 <template name="search_results">
 
-	<div class="nav1" style="border: 1px solid gainsboro; box-shadow: ">
+	<div style="background-color: #5AA6D6;">
 		<div class="container-fluid">
-			<div class="input-group">	
-				<a class="input-group-addon"><i class="fa fa-bars fa-2x"></i></a>
-				<input class="form-control" placeholder="Search..." />
-				 <a class="input-group-addon" id="basic-addon1"><i class="fa fa-search fa-2x"></i></a>
+			<div class="input-group">
+				<a class="input-group-addon" style="color: white"><i class="fa fa-bars fa-2x"></i></a>
+				<h5 style="color: white">DocFinder</h5>
+				<a class="input-group-addon" style="color: white"><i class="fa fa-search fa-2x"></i></a>
 			</div>
 		</div>
-	</div>
+	</div>s
 
 	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="pull-right">
+					<div class="input-group">
+						<a href="#" class="btn btn-default btn-sm"><i class="fa fa-square"></i></a>
+						<a href="#" class="btn btn-default btn-sm active"><i class="fa fa-list"></i></a>
+					</div>
+				</div>
+			</div>	
+		</div>
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="profile-pic" style="">
@@ -42,7 +52,7 @@
 					<i class="fa fa-star-o"></i>
 				</span>
 			    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
-			    <a href="#" class="btn btn-primary btn-block">View More</a>
+			    <a href="/profile" class="btn btn-primary btn-block">View More</a>
 
 			  </div>
 			  <div class="tab-pane fade" id="profile">
@@ -53,7 +63,7 @@
 					<p>Makati</p>
 					<h6>Contact Number:</h6>
 					<p>+63 909 237 1234</p>
-					<a href="#" class="btn btn-primary btn-block">View Profile</a>
+					<a href="/profile" class="btn btn-primary btn-block">View Profile</a>
 				</div>
 			  </div>
 			  <div class="tab-pane fade" id="dropdown1">
